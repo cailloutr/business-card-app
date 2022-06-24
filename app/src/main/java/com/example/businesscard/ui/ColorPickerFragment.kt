@@ -1,50 +1,102 @@
 package com.example.businesscard.ui
 
+import android.app.Activity
 import android.app.Dialog
-import android.content.Context
 import android.content.DialogInterface
+import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.businesscard.R
+import com.google.android.material.slider.RangeSlider
+import com.google.android.material.slider.Slider
+import com.google.android.material.textfield.TextInputEditText
 
-class ColorPickerFragment : DialogFragment(){
+class ColorPickerFragment : DialogFragment() {
 
-    //TODO: retrive the values (RGB values) from the layout inflated
+    private lateinit var sliderRed: Slider
+    private lateinit var sliderGreen: Slider
+    private lateinit var sliderBlue: Slider
+    private lateinit var edtRed: TextInputEditText
+    private lateinit var edtGreen: TextInputEditText
+    private lateinit var edtBlue: TextInputEditText
+    private lateinit var tvColorView: TextView
+
+    private lateinit var listener: ColorPickerDialogListener
+    var colorHex: String = "0"
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
             // Use the Builder class for convenient dialog construction
             val builder = AlertDialog.Builder(it)
             val inflater = requireActivity().layoutInflater
-            builder.setView(inflater.inflate(R.layout.color_picker_fragment, null))
+            val view = inflater.inflate(R.layout.color_picker_fragment, null)
+
+
+            builder.setView(view)
                 // Add action buttons
                 .setPositiveButton("Confirm",
                     DialogInterface.OnClickListener { dialog, id ->
-                        // sign in the user ...
+                        applyColor()
+                        listener.applyColor(colorHex)
                     })
                 .setNegativeButton("Cancel",
                     DialogInterface.OnClickListener { dialog, id ->
                         getDialog()?.cancel()
                     })
-            // Create the AlertDialog object and return it
+
+            sliderRed = view.findViewById(R.id.sld_red)
+            sliderRed.addOnChangeListener { slider, value, fromUser ->
+                edtRed.setText(value.toString())
+                applyColor()
+            }
+
+            sliderGreen = view.findViewById(R.id.sld_green)
+            sliderGreen.addOnChangeListener { slider, value, fromUser ->
+                edtGreen.setText(value.toString())
+                applyColor()
+            }
+
+            sliderBlue = view.findViewById(R.id.sld_blue)
+            sliderBlue.addOnChangeListener { slider, value, fromUser ->
+                edtBlue.setText(value.toString())
+                applyColor()
+            }
+
+            edtRed = view.findViewById(R.id.input_red)
+            edtGreen = view.findViewById(R.id.input_green)
+            edtBlue = view.findViewById(R.id.input_blue)
+            tvColorView = view.findViewById(R.id.tv_color_view)
+
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
     }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        return inflater.inflate(R.layout.color_picker_fragment, container)
-//    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//    }
 
+    private fun applyColor() {
+        val red = edtRed.text.toString().toFloatOrNull()?.toInt()
+        val green = edtGreen.text.toString().toFloatOrNull()?.toInt()
+        val blue = edtBlue.text.toString().toFloatOrNull()?.toInt()
+
+        val color = "#${"%02x".format(red)}${"%02x".format(green)}${"%02x".format(blue)}"
+        Log.v("Color", "Value of color: $color")
+
+        tvColorView.setBackgroundColor(Color.parseColor(color))
+        this.colorHex = color
+    }
+
+    override fun onAttach(activity: Activity) {
+        super.onAttach(activity)
+
+        try {
+            listener = context as ColorPickerDialogListener
+        } catch (e: ClassCastException) {
+            throw ClassCastException("${context.toString()} must implement ColorPickerDialogListener")
+        }
+    }
+
+    interface ColorPickerDialogListener{
+        fun applyColor(colorHex: String)
+    }
 }
