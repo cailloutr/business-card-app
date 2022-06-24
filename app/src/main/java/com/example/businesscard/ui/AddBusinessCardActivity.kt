@@ -1,13 +1,11 @@
 package com.example.businesscard.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.businesscard.ColorPickerActivity
 import com.example.businesscard.databinding.ActivityAddBusinessCardBinding
 
 
-class AddBusinessCardActivity : AppCompatActivity() {
+class AddBusinessCardActivity : AppCompatActivity(), ColorPickerFragment.ColorPickerDialogListener {
 
     lateinit var binding: ActivityAddBusinessCardBinding
 
@@ -29,11 +27,16 @@ class AddBusinessCardActivity : AppCompatActivity() {
         }
 
         binding.btnCor.setOnClickListener {
-//            val colorDialog = ColorPickerFragment()
-//            colorDialog.show(supportFragmentManager, "Color")
-////            colorDialog.show(supportFragmentManager, colorDialog.tag)
-            val intent = Intent(this, ColorPickerActivity::class.java)
-            startActivity(intent)
+            openDialog()
         }
+    }
+
+    private fun openDialog() {
+        val colorDialog = ColorPickerFragment()
+        colorDialog.show(supportFragmentManager, colorDialog.tag)
+    }
+
+    override fun applyColor(colorHex: String) {
+        binding.tilCor.editText?.text ?: colorHex
     }
 }
