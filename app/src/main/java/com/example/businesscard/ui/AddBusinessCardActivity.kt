@@ -37,6 +37,6 @@ class AddBusinessCardActivity : AppCompatActivity(), ColorPickerFragment.ColorPi
     }
 
     override fun applyColor(colorHex: String) {
-        binding.tilCor.editText?.text ?: colorHex
+        binding.tilCor.editText?.setText(colorHex)
     }
 }
