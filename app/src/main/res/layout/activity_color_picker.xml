@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/txt_pick_a_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_color_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_red_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="@string/txt_red_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_color_view" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sld_red"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="255"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_red_color"
+        app:layout_constraintEnd_toEndOf="@+id/tv_color_view"
+        app:layout_constraintStart_toEndOf="@+id/tv_red_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_red_color"
+        app:thumbColor="@color/red"
+        app:trackColor="@color/ligh_red" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_red"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/sld_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sld_red"
+        app:layout_constraintTop_toTopOf="@id/sld_red"
+        android:text="255" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_green_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="@string/txt_green_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_red_color" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sld_green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="255"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_green_color"
+        app:layout_constraintEnd_toEndOf="@+id/tv_color_view"
+        app:layout_constraintStart_toEndOf="@+id/tv_green_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_green_color"
+        app:thumbColor="@color/green"
+        app:trackColor="@color/ligh_green" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/sld_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sld_green"
+        app:layout_constraintTop_toTopOf="@id/sld_green"
+        android:text="255" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_blue_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="@string/txt_blue_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_green_color" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sld_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="255"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_blue_color"
+        app:layout_constraintEnd_toEndOf="@+id/tv_color_view"
+        app:layout_constraintStart_toEndOf="@+id/tv_green_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_blue_color"
+        app:thumbColor="@color/blue"
+        app:trackColor="@color/ligh_blue" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/sld_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sld_blue"
+        app:layout_constraintTop_toTopOf="@id/sld_blue"
+        android:text="255" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

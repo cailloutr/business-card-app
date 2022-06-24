@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+    <string name="label_bisiness_card">Cartão de Visitas</string>
+    <string name="cd_create_button">Create new business card button</string>
+    <string name="label_description_new_card">Novo Cartão</string>
+    <string name="label_nome">Nome</string>
+    <string name="label_telefone">Telefone</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_empresa">Empresa</string>
+    <string name="label_cor">Cor</string>
+    <string name="label_confirmar">Confirmar</string>
+    <string name="pick_a_color">Pick a color</string>
+    <string name="btn_color">Pick a color</string>
+    <string name="txt_pick_a_color">Pick a color</string>
+    <string name="txt_red_color">R:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_green_color">G:</string>
+    <string name="txt_blue_color">B:</string>
+</resources>
