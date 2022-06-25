@@ -66,6 +66,9 @@ class ColorPickerFragment : DialogFragment() {
     }
 
     private fun insertListeners(sld: Slider, editText: TextInputEditText) {
+        val initial = 0
+        editText.setText(initial.toString())
+
         sld.addOnChangeListener { _, value, _ ->
             editText.setText(value.toInt().toString())
             applyColor()
@@ -94,7 +97,6 @@ class ColorPickerFragment : DialogFragment() {
             }
 
             override fun afterTextChanged(s: Editable?) {}
-
         })
     }
 
