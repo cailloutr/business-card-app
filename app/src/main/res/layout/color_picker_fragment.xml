@@ -9,7 +9,7 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/default_margin"
         android:text="@string/txt_pick_a_color"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -19,12 +19,13 @@
 
     <TextView
         android:id="@+id/tv_color_view"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_margin="16dp"
+        android:layout_width="@dimen/tv_color_dimen"
+        android:layout_height="@dimen/tv_color_dimen"
+        android:layout_margin="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -32,34 +33,35 @@
         android:id="@+id/tv_red_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_margin="@dimen/default_margin"
         android:text="@string/txt_red_color"
-        android:textSize="20sp"
+        android:textSize="@dimen/rgb_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/sld_red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_color_view" />
+        app:layout_constraintTop_toTopOf="@+id/sld_red" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sld_red"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:stepSize="1.0"
+        android:layout_margin="@dimen/default_margin"
+        android:stepSize="1"
         android:value="0"
         android:valueFrom="0"
         android:valueTo="255"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_red_color"
+        app:haloColor="@color/ligh_red"
         app:layout_constraintEnd_toEndOf="@+id/tv_color_view"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/tv_red_color"
-        app:layout_constraintTop_toTopOf="@+id/tv_red_color"
+        app:layout_constraintTop_toBottomOf="@+id/tv_color_view"
         app:thumbColor="@color/red"
-        app:trackColor="@color/ligh_red"
-        app:haloColor="@color/ligh_red"/>
+        app:trackColor="@color/ligh_red" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_red"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/default_margin"
         android:inputType="number"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="@id/sld_red"
@@ -71,34 +73,35 @@
         android:id="@+id/tv_green_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_margin="@dimen/default_margin"
         android:text="@string/txt_green_color"
-        android:textSize="20sp"
+        android:textSize="@dimen/rgb_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/sld_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_red_color" />
+        app:layout_constraintTop_toTopOf="@+id/sld_green" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sld_green"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/default_margin"
         android:stepSize="1"
         android:value="0"
         android:valueFrom="0"
         android:valueTo="255"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_green_color"
-        app:layout_constraintEnd_toEndOf="@+id/tv_color_view"
-        app:layout_constraintStart_toEndOf="@+id/tv_green_color"
-        app:layout_constraintTop_toTopOf="@+id/tv_green_color"
+        app:haloColor="@color/ligh_green"
+        app:layout_constraintEnd_toEndOf="@+id/sld_red"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sld_red"
+        app:layout_constraintTop_toBottomOf="@+id/sld_red"
         app:thumbColor="@color/green"
-        app:trackColor="@color/ligh_green"
-        app:haloColor="@color/ligh_green"/>
+        app:trackColor="@color/ligh_green" />
 
-    <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_green"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/default_margin"
         android:inputType="number"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="@id/sld_green"
@@ -110,34 +113,35 @@
         android:id="@+id/tv_blue_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_margin="@dimen/default_margin"
         android:text="@string/txt_blue_color"
-        android:textSize="20sp"
+        android:textSize="@dimen/rgb_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/sld_blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_green_color" />
+        app:layout_constraintTop_toTopOf="@+id/sld_blue" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sld_blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/default_margin"
         android:stepSize="1"
         android:value="0"
         android:valueFrom="0"
         android:valueTo="255"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_blue_color"
-        app:layout_constraintEnd_toEndOf="@+id/tv_color_view"
-        app:layout_constraintStart_toEndOf="@+id/tv_green_color"
-        app:layout_constraintTop_toTopOf="@+id/tv_blue_color"
+        app:haloColor="@color/ligh_blue"
+        app:layout_constraintEnd_toEndOf="@+id/sld_green"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sld_green"
+        app:layout_constraintTop_toBottomOf="@+id/sld_green"
         app:thumbColor="@color/blue"
-        app:trackColor="@color/ligh_blue"
-        app:haloColor="@color/ligh_blue"/>
+        app:trackColor="@color/ligh_blue" />
 
-    <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/default_margin"
         android:inputType="number"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="@id/sld_blue"
