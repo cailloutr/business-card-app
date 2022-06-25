@@ -44,15 +44,10 @@
         android:id="@+id/sld_red"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginTop="@dimen/default_margin"
         android:layout_marginStart="@dimen/default_margin"
         android:stepSize="1"
         android:value="0"
-=======
-        android:layout_margin="16dp"
-        android:stepSize="1"
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
         android:valueFrom="0"
         android:valueTo="255"
         app:haloColor="@color/light_red"
@@ -60,31 +55,21 @@
         app:layout_constraintStart_toEndOf="@+id/tv_red_color"
         app:layout_constraintTop_toBottomOf="@+id/tv_color_view"
         app:thumbColor="@color/red"
-<<<<<<< HEAD
         app:trackColor="@color/light_red" />
-=======
-        app:trackColor="@color/ligh_red" />
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
+
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_red"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginEnd="@dimen/default_margin"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@id/sld_red"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/sld_red"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="@id/sld_red" />
-=======
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/sld_red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sld_red"
-        app:layout_constraintTop_toTopOf="@id/sld_red"
-        android:text="255" />
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_green_color"
@@ -110,31 +95,18 @@
         app:layout_constraintStart_toStartOf="@+id/sld_red"
         app:layout_constraintTop_toBottomOf="@+id/sld_red"
         app:thumbColor="@color/green"
-<<<<<<< HEAD
         app:trackColor="@color/light_green" />
-=======
-        app:trackColor="@color/ligh_green" />
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_green"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginEnd="@dimen/default_margin"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@id/sld_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="@id/sld_green" />
-=======
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/sld_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sld_green"
-        app:layout_constraintTop_toTopOf="@id/sld_green"
-        android:text="255" />
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_blue_color"
@@ -161,31 +133,19 @@
         app:layout_constraintStart_toStartOf="@+id/sld_green"
         app:layout_constraintTop_toBottomOf="@+id/sld_green"
         app:thumbColor="@color/blue"
-<<<<<<< HEAD
         app:trackColor="@color/light_blue" />
-=======
-        app:trackColor="@color/ligh_blue" />
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+
         android:layout_marginEnd="@dimen/default_margin"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@id/sld_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="@id/sld_blue" />
-=======
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/sld_blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sld_blue"
-        app:layout_constraintTop_toTopOf="@id/sld_blue"
-        android:text="255" />
->>>>>>> parent of e5e77e4 (Created the ColorPickerFragment.kt and the color_picker_fragment.xml to work as a dialog to dynamic pick a color)
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
