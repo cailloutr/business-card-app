@@ -51,7 +51,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_red_color"
         app:layout_constraintTop_toTopOf="@+id/tv_red_color"
         app:thumbColor="@color/red"
-        app:trackColor="@color/ligh_red" />
+        app:trackColor="@color/light_red" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_red"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_green_color"
         app:layout_constraintTop_toTopOf="@+id/tv_green_color"
         app:thumbColor="@color/green"
-        app:trackColor="@color/ligh_green" />
+        app:trackColor="@color/light_green" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_green"
@@ -123,7 +123,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_green_color"
         app:layout_constraintTop_toTopOf="@+id/tv_blue_color"
         app:thumbColor="@color/blue"
-        app:trackColor="@color/ligh_blue" />
+        app:trackColor="@color/light_blue" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_blue"
