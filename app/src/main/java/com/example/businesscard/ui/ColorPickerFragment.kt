@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.businesscard.R
+import com.example.businesscard.databinding.ColorPickerFragmentBinding
 import com.google.android.material.slider.Slider
 import com.google.android.material.textfield.TextInputEditText
 
@@ -27,6 +28,8 @@ class ColorPickerFragment : DialogFragment() {
 
     private lateinit var listener: ColorPickerDialogListener
     private var colorHex: String = "0"
+    //TODO(Repolace the findViewById references for binding)
+    //private lateinit var binding: ColorPickerFragmentBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
@@ -35,6 +38,7 @@ class ColorPickerFragment : DialogFragment() {
             val inflater = requireActivity().layoutInflater
             val view = inflater.inflate(R.layout.color_picker_fragment, null)
 
+            //binding = ColorPickerFragmentBinding.inflate(layoutInflater)
 
             builder.setView(view)
                 // Add action buttons
