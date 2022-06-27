@@ -20,4 +20,5 @@
     <string name="label_show_succses">Cartão cadastrado com sucesso!</string>
     <string name="image_save_succses">Imagem capturada com sucesso</string>
     <string name="label_share">Compartilhar</string>
+    <string name="delete_card">Delete card</string>
 </resources>

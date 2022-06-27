@@ -2,7 +2,6 @@ package com.example.businesscard.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +10,6 @@ import com.example.businesscard.databinding.ActivityMainBinding
 import com.example.businesscard.util.Image
 
 //TODO: Delete button
-//TODO: Long press to edit card
 //TODO: set an onLongClickListener to update an card
 
 class MainActivity : AppCompatActivity() {

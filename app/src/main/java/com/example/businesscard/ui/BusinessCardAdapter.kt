@@ -33,6 +33,7 @@ class BusinessCardAdapter :
             if (Color.parseColor(item.background) >= Color.parseColor("black") &&
                 Color.parseColor(item.background) <= Color.parseColor("#969696")) { //#62676c
 
+                binding.ivDelete.setColorFilter(Color.parseColor("#FFFFFF"))
                 binding.tvNome.setTextColor(Color.parseColor("#FFFFFF"))
                 binding.tvTelefone.setTextColor(Color.parseColor("#FFFFFF"))
                 binding.tvEmail.setTextColor(Color.parseColor("#FFFFFF"))
