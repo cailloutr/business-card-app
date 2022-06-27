@@ -2,15 +2,17 @@ package com.example.businesscard.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.example.businesscard.App
 import com.example.businesscard.databinding.ActivityMainBinding
 import com.example.businesscard.util.Image
 
 //TODO: Delete button
-//TODO: Long press to delete card
-//TODO: set the textColor to with if the card's background is black or a dark color tone
+//TODO: Long press to edit card
+//TODO: set an onLongClickListener to update an card
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,11 +35,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun insertListeners() {
+        // Add new card
         binding.btnAddNewCard.setOnClickListener {
             val intent = Intent(this@MainActivity, AddBusinessCardActivity::class.java)
             startActivity(intent)
         }
 
+        // Hide the FloatActionButton when scrolling to the bottom of the view
+        binding.rvCards.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (newState == RecyclerView.SCROLL_STATE_IDLE && recyclerView.canScrollVertically(Integer.MAX_VALUE)) {
+                    binding.btnAddNewCard.show();
+                } else {
+                    binding.btnAddNewCard.hide();
+                }
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (!recyclerView.canScrollVertically(Integer.MAX_VALUE)) {
+                    binding.btnAddNewCard.hide();
+                }
+            }
+        })
+
+        // Share when clicking on the card
         adapter.listenerShare = { card ->
             Image.share(this@MainActivity, card)
         }
