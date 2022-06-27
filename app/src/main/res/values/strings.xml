@@ -17,4 +17,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_green_color">G:</string>
     <string name="txt_blue_color">B:</string>
+    <string name="label_show_succses">Cartão cadastrado com sucesso!</string>
+    <string name="image_save_succses">Imagem capturada com sucesso</string>
+    <string name="label_share">Compartilhar</string>
 </resources>

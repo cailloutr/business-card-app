@@ -24,6 +24,13 @@ class BusinessCardAdapter :
             binding.tvEmail.text = item.email
             binding.tvEmpresa.text = item.empresa
             binding.mcvContent.setCardBackgroundColor(Color.parseColor(item.background))
+            //TODO: change the text color to white if the background color is black or dark
+            if (item.background == "#000000") {
+                binding.tvNome.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.tvTelefone.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.tvEmail.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.tvEmpresa.setTextColor(Color.parseColor("#FFFFFF"))
+            }
             binding.mcvContent.setOnClickListener {
                 listenerShare(it)
             }
@@ -41,7 +48,6 @@ class BusinessCardAdapter :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-
 
 }
 
