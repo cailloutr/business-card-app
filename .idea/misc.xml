@@ -6,6 +6,7 @@
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/drawable/background.xml" value="0.2285" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/drawable/circle_view.xml" value="0.1955" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.208" />
+        <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2435" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/drawable/ic_close.xml" value="0.208" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/activity_add_business_card.xml" value="0.33" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/activity_color_picker.xml" value="0.29379485014774165" />
@@ -14,7 +15,7 @@
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/color_dialog_fragment.xml" value="0.33" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/color_picker_fragment.xml" value="0.25" />
         <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/fragment_color_picker.xml" value="0.18177083333333333" />
-        <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/item_business_card.xml" value="0.33" />
+        <entry key="..\:/Users/caiot/AndroidStudioProjects/BusinessCard/app/src/main/res/layout/item_business_card.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -9,8 +9,8 @@ import com.example.businesscard.App
 import com.example.businesscard.databinding.ActivityMainBinding
 import com.example.businesscard.util.Image
 
-//TODO: Delete button
-//TODO: set an onLongClickListener to update an card
+//TODO: 1 - Delete button
+//TODO: 2 - Set an onLongClickListener to update an card
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,18 +42,18 @@ class MainActivity : AppCompatActivity() {
         // Hide the FloatActionButton when scrolling to the bottom of the view
         binding.rvCards.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState);
+                super.onScrollStateChanged(recyclerView, newState)
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && recyclerView.canScrollVertically(Integer.MAX_VALUE)) {
-                    binding.btnAddNewCard.show();
+                    binding.btnAddNewCard.show()
                 } else {
-                    binding.btnAddNewCard.hide();
+                    binding.btnAddNewCard.hide()
                 }
             }
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy);
+                super.onScrolled(recyclerView, dx, dy)
                 if (!recyclerView.canScrollVertically(Integer.MAX_VALUE)) {
-                    binding.btnAddNewCard.hide();
+                    binding.btnAddNewCard.hide()
                 }
             }
         })
