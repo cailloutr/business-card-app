@@ -24,8 +24,15 @@ class BusinessCardAdapter :
             binding.tvEmail.text = item.email
             binding.tvEmpresa.text = item.empresa
             binding.mcvContent.setCardBackgroundColor(Color.parseColor(item.background))
-            //TODO: change the text color to white if the background color is black or dark
-            if (item.background == "#000000") {
+
+             /*
+             Change the text color to white if the background color is black or a color tone
+             Color.parseColor return an int number witch is used in the comparison
+             if between -16777216 and -6908266 is been considered a dark color tone
+             */
+            if (Color.parseColor(item.background) >= Color.parseColor("black") &&
+                Color.parseColor(item.background) <= Color.parseColor("#969696")) { //#62676c
+
                 binding.tvNome.setTextColor(Color.parseColor("#FFFFFF"))
                 binding.tvTelefone.setTextColor(Color.parseColor("#FFFFFF"))
                 binding.tvEmail.setTextColor(Color.parseColor("#FFFFFF"))

@@ -8,6 +8,10 @@ import com.example.businesscard.App
 import com.example.businesscard.databinding.ActivityMainBinding
 import com.example.businesscard.util.Image
 
+//TODO: Delete button
+//TODO: Long press to delete card
+//TODO: set the textColor to with if the card's background is black or a dark color tone
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
