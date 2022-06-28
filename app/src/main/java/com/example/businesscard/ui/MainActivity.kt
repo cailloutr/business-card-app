@@ -6,11 +6,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.businesscard.App
+import com.example.businesscard.data.BusinessCard
 import com.example.businesscard.databinding.ActivityMainBinding
 import com.example.businesscard.util.Image
 
-//TODO: 1 - Delete button
-//TODO: 2 - Set an onLongClickListener to update an card
+//TODO: 1 - Set an onLongClickListener to update an card
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,6 +62,16 @@ class MainActivity : AppCompatActivity() {
         adapter.listenerShare = { card ->
             Image.share(this@MainActivity, card)
         }
+
+        // Delete a card on click
+        adapter.deleteListener = {
+            deleteCard(it)
+        }
+    }
+
+    // Delete a card
+    private fun deleteCard(businessCard: BusinessCard){
+        mainViewModel.delete(businessCard)
     }
 
     private fun getAllBusinessCard() {

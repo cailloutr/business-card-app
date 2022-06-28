@@ -15,6 +15,10 @@ class MainViewModel(private val businessCardRepository: BusinessCardRepository) 
     fun getAll(): LiveData<List<BusinessCard>> {
         return businessCardRepository.getAll()
     }
+
+    fun delete(businessCard: BusinessCard) {
+        businessCardRepository.deleteCard(businessCard)
+    }
 }
 
 class MainViewModelFactory(private val repository: BusinessCardRepository) :

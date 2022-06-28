@@ -38,7 +38,10 @@ class AddBusinessCardActivity : AppCompatActivity(), ColorPickerFragment.ColorPi
                 empresa = binding.tilEmpresa.editText?.text.toString(),
                 telefone = binding.tilTelefone.editText?.text.toString(),
                 email = binding.tilEmail.editText?.text.toString(),
-                background = if ((binding.tilCor.editText?.text.toString()).isNullOrEmpty()) "#FFFFFFFF" else binding.tilCor.editText?.text.toString()
+                background = if ((binding.tilCor.editText?.text.toString()).isEmpty())
+                    "#FFFFFFFF"
+                else
+                    binding.tilCor.editText?.text.toString()
             )
             mainViewModel.insert(businessCard)
             Toast.makeText(this, R.string.label_show_succses, Toast.LENGTH_SHORT).show()

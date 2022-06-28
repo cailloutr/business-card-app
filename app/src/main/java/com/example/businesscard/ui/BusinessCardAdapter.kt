@@ -14,6 +14,7 @@ class BusinessCardAdapter :
     ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallback()) {
 
     var listenerShare: (View) -> Unit = {}
+    var deleteListener: (BusinessCard) -> Unit = {}
 
     inner class ViewHolder(
         private val binding: ItemBusinessCardBinding,
@@ -39,8 +40,13 @@ class BusinessCardAdapter :
                 binding.tvEmail.setTextColor(Color.parseColor("#FFFFFF"))
                 binding.tvEmpresa.setTextColor(Color.parseColor("#FFFFFF"))
             }
+
             binding.mcvContent.setOnClickListener {
                 listenerShare(it)
+            }
+
+            binding.ivDelete.setOnClickListener {
+                deleteListener(item)
             }
         }
     }
